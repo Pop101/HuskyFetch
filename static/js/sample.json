@@ -1,0 +1,34 @@
+{
+    "event": [
+       {
+          "name": "01",
+          "location": "Java",
+          "startTime": "third",
+          "endTime": "third",
+          "description": "Herbert Schildt"
+       },
+       {
+          "name": "07",
+          "location": "C++",
+          "startTime": "second",
+          "endTime": "second",
+          "description": "E.Balagurusamy"
+       }
+    ],
+    "class": [
+      {
+         "name": "02",
+         "location": "Java2",
+         "startTime": "third2",
+         "endTime": "third2",
+         "description": "Herbert Schildt"
+      },
+      {
+         "name": "03",
+         "location": "C--",
+         "startTime": "second2",
+         "endTime": "second2",
+         "description": "E.Balagurusamy"
+      }
+   ]
+ }

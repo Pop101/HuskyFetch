@@ -1,0 +1,4 @@
+*.log
+googlemaps_key.txt
+UPDATE/*
+*.DS_STORE

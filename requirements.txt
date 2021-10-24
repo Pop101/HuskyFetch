@@ -1,0 +1,7 @@
+flask
+waitress
+selenium
+iCalendar
+APScheduler
+python-Levenshtein
+LivePopularTimes

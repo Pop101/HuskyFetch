@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HuskyFetch</title>
+    <meta property="og:image" content="static/img/Screen%20Shot%202021-10-24%20at%204.31.15%20AM.png">
+    <meta name="description" content="HuskyFetch - Dubhacks 
+Made by Harry Fung, Leon Leibmann, Mel Steppe, and Micah Chang ">
+    <link rel="icon" type="image/png" href="/static/img/icon-small.png" />
+    <link rel="icon" type="image/png" sizes="700x700"
+        href="static/img/Screen%20Shot%202021-10-24%20at%2012.38.53%20AM.png">
+    <link rel="icon" type="image/png" sizes="700x700"
+        href="static/img/Screen%20Shot%202021-10-24%20at%2012.38.53%20AM.png">
+    <link rel="icon" type="image/png" sizes="700x700"
+        href="static/img/Screen%20Shot%202021-10-24%20at%2012.38.53%20AM.png">
+    <link rel="icon" type="image/png" sizes="700x700"
+        href="static/img/Screen%20Shot%202021-10-24%20at%2012.38.53%20AM.png">
+    <link rel="icon" type="image/png" sizes="700x700"
+        href="static/img/Screen%20Shot%202021-10-24%20at%2012.38.53%20AM.png">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header class="text-center text-white masthead" id="parent"
+        style="height: 700px;text-shadow: 0px 0px 20px rgb(0,0,0);">
+        <div class="masthead-content" style="height: 250px;">
+            <div class="container">
+                <h1 class="masthead-heading mb-0">Husky Fetch</h1>
+                <h2 class="masthead-subheading mb-0">Campus events near you</h2><a
+                    class="btn btn-primary btn-xl rounded-pill mt-5" role="button" id="button" href="#"
+                    style="background: #4b2e83;border-color: var(--bs-indigo);box-shadow: 0px 0px 20px rgb(0,0,0);">FETCH!</a>
+            </div>
+        </div>
+        <div class="col offset-xl-0" style="padding-top: 125px;padding-bottom: 15px;"><img id="image" class="hidden"
+                src="static/img/dogrungif.gif" style="width: 100px;margin: auto;/*display: block;*/"></div>
+    </header>
+    <section id="event-type-desc" class="hidden" , style="padding: 5%">
+        <div class="container" style="padding-top: 5%">
+            <div>
+                <div style="text-align: left;"><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true"
+                        aria-controls="collapse" href="#collapse" role="button"
+                        style="width: 115px;text-align: left;color: rgb(255, 255, 255);background: #4b2e83;border-color: var(--bs-indigo);">Events</a>
+                    <div class="collapse show" id="collapse">
+                        <div class="event">
+                            <div class="row">
+                                <div class="col-xxl-9 offset-xxl-5">
+                                    <p style="font-weight: bold;font-size: 20px;">Title</p>
+                                </div>
+                                <div class="col" style="min-width: 0;">
+                                    <p style="text-align: right;">Paragraph</p>
+                                </div>
+                            </div>
+                            <p style="padding-left: 1rem;">Description</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Location</p>
+                                </div>
+                                <div class="col">
+                                    <p>Start - End</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+        style="background: rgb(0,0,0);padding: 0px;padding-left: 32px;width: 100%;margin: auto;padding-right: 32px;padding-top: 32px;">
+        <div style="margin: auto;">
+            <p class="text-center text-white" style="margin: auto;margin-bottom: 0px;background: #000000;"><strong>Husky
+                    Fetch generates a list of events currently happening on campus when the user clicks the fetch
+                    button. It generates everything from HFS events to lectures open for auditing. Use it as a tool for
+                    finding your next academic adventure or a new friend!</strong></p>
+        </div>
+    </section>
+    <section style="width: 100%;margin: auto;color: rgb(33, 37, 41);background: rgb(0,0,0);padding: 0;">
+        <div style="padding-top: 15px;padding-bottom: 5px;">
+            <p style="color: rgb(255,255,255);text-align: center;">This website has been used {{counter}} times to find
+                events!</p>
+        </div>
+    </section>
+    <section style="background: rgb(0,0,0);width: 100%;margin: auto;height: 100px;">
+        <div style="margin: auto;width: 94px;">
+            <form action="https://www.paypal.com/donate" method="post" target="_top">
+                <input type="hidden" name="business" value="UFTWHHR9RJD7J" />
+                <input type="hidden" name="no_recurring" value="0" />
+                <input type="hidden" name="item_name" value="Donate to help keep HuskyFetch running!" />
+                <input type="hidden" name="currency_code" value="USD" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0"
+                    name="submit" title="PayPal - The safer, easier way to pay online!"
+                    alt="Donate with PayPal button" />
+                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+            </form>
+        </div>
+    </section>
+    <footer class="py-5 bg-black">
+        <div class="container">
+            <p class="text-center text-white m-0 small">Copyright&nbsp;© HuskyFetch 2021</p>
+        </div>
+    </footer>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/js/DogRunGif.js"></script>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/scroller.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HuskyFetch</title>
+    <meta name="description" content="HuskyFetch - Dubhacks 
+Made by Harry Fung, Leon Leibmann, Mel Steppe, and Micah Chang ">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body>
+    <header class="text-center text-white masthead" id="parent" style="height: 700px;text-shadow: 0px 0px 20px rgb(0,0,0);">
+        <div class="masthead-content" style="height: 250px;">
+            <div class="container">
+                <h1 class="masthead-heading mb-0">Husky Fetch</h1>
+                <h2 class="masthead-subheading mb-0">Campus events near you</h2><a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" id="button" href="#" style="background: #4b2e83;border-color: var(--bs-indigo);box-shadow: 0px 0px 20px rgb(0,0,0);">FETCH!</a>
+            </div>
+        </div>
+        <div class="col" style="padding-top: 125px;padding-bottom: 15px;"><img id="image" class="hidden" src="assets/img/dogrungif.gif" style="width: 100px;margin: auto;/*display: block;*/"></div>
+    </header>
+    <section id="event-type-desc" class="hidden">
+        <div class="container">
+            <div style="height: 15px;">
+                <div style="text-align: left;"><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse" href="#collapse" role="button" style="width: 115px;text-align: left;color: rgb(255, 255, 255);background: #4b2e83;border-color: var(--bs-indigo);">Events</a>
+                    <div class="collapse show" id="collapse">
+                        <div class="event">
+                            <div class="row">
+                                <div class="col-xxl-9 offset-xxl-5">
+                                    <p style="font-weight: bold;font-size: 20px;">Title</p>
+                                </div>
+                                <div class="col" style="min-width: 0;">
+                                    <p style="text-align: right;">Paragraph</p>
+                                </div>
+                            </div>
+                            <p style="padding-left: 1rem;">Description</p>
+                            <div class="row">
+                                <div class="col">
+                                    <p>Location</p>
+                                </div>
+                                <div class="col">
+                                    <p>Start - End</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div id="scroll-to" style="height: 150px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-5 bg-black">
+        <div class="container">
+            <p class="text-center text-white" style="margin: auto;margin-bottom: 35px;"><strong>Husky Fetch generates a list of events currently happening on campus when the user clicks the fetch button. It generates everything from HFS events to lectures open for auditing. Use it as a tool for finding your next academic adventure or a new friend!</strong></p>
+            <p class="text-center text-white m-0 small">Copyright&nbsp;© HuskyFetch 2021</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/DogRunGif.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/scroller.js"></script>
+</body>
+
+</html>
