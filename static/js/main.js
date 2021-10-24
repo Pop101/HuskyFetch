@@ -26,7 +26,8 @@ async function searchEvent() {
     console.log(eventData);
 
     let data = accessData(eventData);
-    if (data.length == 0) {
+    console.log(data == null);
+    if (data == null || data == '' || data.length == 0) {
         let quip = ['In terms of events, we have no events', 'There\'s nothing for miles', 'Only a desert...'];
         quip = quip[Math.floor(Math.random() * quip.length)];
 

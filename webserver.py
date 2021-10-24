@@ -38,7 +38,7 @@ def locate_events():
     return responses
 
 
-def get_recent_events(max_time_until_start: int = 40*60, max_time_until_end: int = 5*3600):
+def get_recent_events(max_time_until_start: int = 40*60*1000, max_time_until_end: int = 1000*5*3600):
     results = {}
     with open('database.json') as f:
         results = json.loads(f.read())
@@ -104,7 +104,7 @@ async def scrape_all():
     return responses
 
 
-update_database()
+# update_database()
 print('initial scraping complete')
 
 scheduler = BackgroundScheduler()

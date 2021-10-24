@@ -39,6 +39,14 @@ class HuskyLinkScraper(Scraper):
             description = driver.find_element_by_xpath('//h2/../div')
             description = description.text
 
+            if len(location) > 50:
+                location, description = description, location
+
+            if len(location) < 5:
+                continue
+            if len(description) < 5:
+                continue
+
             driver.close()
             driver.switch_to.window(driver.window_handles[0])
 
