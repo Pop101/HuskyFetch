@@ -44,3 +44,12 @@ section {
   margin: 0px;
 }
 
+@media screen and (max-width: 600px) {
+  section {
+    margin: 0 5vw 10vw 5vw;
+  }
+
+  .flex-mobile {
+    flex-direction: column;
+  }
+}
