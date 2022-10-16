@@ -1,6 +1,5 @@
 from datetime import datetime, timedelta
-from json import load
-from os import times
+from os import path
 from flask import Flask, render_template, request
 from waitress import serve
 from modules.scraper import get_all_classes
@@ -8,6 +7,7 @@ import pickle
 
 from apscheduler.schedulers.background import BackgroundScheduler
 
+DATABASE_PATH = "database.pk"
 UPDATE_INTERVAL = 3600
 
 app = Flask(__name__)
@@ -59,11 +59,13 @@ def get_valid_events(max_time_until_start: timedelta = timedelta(hours=2)):
 
 
 def load_database():
-    with open("database.pk", "rb") as f:
+    if not path.exists(DATABASE_PATH):
+        return update_database()
+
+    with open(DATABASE_PATH, "rb") as f:
         db = pickle.load(f)
 
     if db["last_updated"] + UPDATE_INTERVAL < datetime.now().timestamp():
-        print("Last updated: ", datetime.fromtimestamp(db["last_updated"]))
         return update_database()
     return db
 
@@ -77,7 +79,7 @@ def update_database():
         "last_updated": datetime.now().timestamp(),
         "events": events,
     }
-    with open("database.pk", "wb") as f:
+    with open(DATABASE_PATH, "wb") as f:
         pickle.dump(prog_info, f)
     return prog_info
 
