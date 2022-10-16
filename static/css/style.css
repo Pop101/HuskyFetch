@@ -50,6 +50,6 @@ section {
   }
 
   .flex-mobile {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
