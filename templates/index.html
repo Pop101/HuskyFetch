@@ -34,9 +34,20 @@ Made by Harry Fung, Leon Leibmann, Mel Steppe, and Micah Chang ">
         <div class="masthead-content" style="height: 250px;">
             <div class="container">
                 <h1 class="masthead-heading mb-0">Husky Fetch</h1>
-                <h2 class="masthead-subheading mb-0">Campus events near you</h2><a
-                    class="btn btn-primary btn-xl rounded-pill mt-5" role="button" id="button" href="#"
-                    style="background: #4b2e83;border-color: var(--bs-indigo);box-shadow: 0px 0px 20px rgb(0,0,0);">FETCH!</a>
+                <h2 class="masthead-subheading mb-0">New Lectures near you</h2>
+                <div class="d-flex p-2 justify-content-center">
+                    <a class="btn btn-primary btn-xl rounded-pill" role="button" id="button" href="#"
+                        style="background: #4b2e83;border-color: var(--bs-indigo);box-shadow: 0px 0px 20px rgb(0,0,0);margin: 20px;">FETCH!</a>
+                    <div class="d-flex flex-column justify-content-center" style="min-width: 31ch;">
+                        <label for=" timeRange" style="text-shadow: 0px 0px 12px rgb(0 0 0);">
+                            Classes in the next <span id="rangeval">2 hours</span>
+                        </label>
+
+                        <input type="range" class="form-control-range" id="timeRange" min="0" max="100" step="1"
+                            value="10">
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="col offset-xl-0" style="padding-top: 125px;padding-bottom: 15px;"><img id="image" class="hidden"
@@ -111,6 +122,7 @@ Made by Harry Fung, Leon Leibmann, Mel Steppe, and Micah Chang ">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="static/js/DogRunGif.js"></script>
     <script src="static/js/main.js"></script>
+    <script src="static/js/range.js"></script>
     <script src="static/js/scroller.js"></script>
 </body>
 

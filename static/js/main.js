@@ -28,10 +28,11 @@ async function searchEvent() {
     let data = accessData(eventData);
     console.log(data == null);
     if (data == null || data == '' || data.length == 0) {
-        let quip = ['In terms of events, we have no events', 'There\'s nothing for miles', 'Only a desert...'];
+        let quip = ['In terms of classes, we have no classes', 'There\'s nothing for miles', 'Time to chillax...'];
         quip = quip[Math.floor(Math.random() * quip.length)];
 
-        data = `<h3>No events found!</h3><p style="font-style: italic; text-align:center;">${quip}</p><p>Try again later</p>`;
+        text = "Adjust your timeframe or try again later";
+        data = `<h3>No lectures found!</h3><p>${text}</p><p style="font-style: italic; text-align:center;">${quip}</p>`;
     }
     document.getElementById("event-type-desc").innerHTML = `
     <h1 class="app-title">Events</h1>
@@ -46,7 +47,6 @@ function accessData(database) {
         let block_results = `
             <div>
             <div style="min-height:30px"> </div>
-            <div style="text-align: left;"><a class="btn btn-primary collapsor" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse" href="#collapse" role="button" style="width: 115px;text-align: left;color: rgb(255, 255, 255);background: #4b2e83;border-color: var(--bs-indigo);">${eventType[0].charAt(0).toUpperCase() + eventType[0].substring(1)}</a>
             <div class="collapse show" id="collapse_${eventType[0]}">
         `
         for (let event of Object.entries(eventType[1])) {
@@ -56,7 +56,6 @@ function accessData(database) {
         }
 
         block_results += `
-            </div>
             </div>
             </div>
             
@@ -72,7 +71,10 @@ async function getData(url) {
     const btn = $('#button');
     const btnText = btn.textContent;
     btn.innerHTML = "<i class=\"fa fa-spinner fa-spin\"></i>" + btnText;
-    const response = await fetch(url);
+
+    const timespan = times[getClosest(times, $('#timeRange').val())];
+    const response = await fetch(url + `?span=${timespan}`);
+
     btn.innerHTML = btnText;
     return response.json();
 }
