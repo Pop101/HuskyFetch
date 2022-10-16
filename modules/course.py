@@ -9,7 +9,7 @@ class Course:
     # Capacity
     # Location (room + building)
     # Times (day, time, duration)
-    def __init__(self, name: str = None, descr: str = None, loc: str = None, cap: tuple[int] = None) -> None:
+    def __init__(self, name: str = None, descr: str = None, loc: str = None, cap: tuple = None) -> None:
         self.set_info(name, descr, loc, cap)
         self.days = None
         self.start_date = None
@@ -18,13 +18,13 @@ class Course:
         self.end_time = None
         self.timeframes = list()
 
-    def set_info(self, name: str = None, descr: str = None, loc: str = None, cap: tuple[int] = None) -> None:
+    def set_info(self, name: str = None, descr: str = None, loc: str = None, cap: tuple = None) -> None:
         self.name = name
         self.description = descr
         self.location = loc
         self.capacity = cap
 
-    def set_days(self, days: list[int]) -> None:
+    def set_days(self, days: list) -> None:
         self.days = days
         self.recalculate_timeframe()
 
