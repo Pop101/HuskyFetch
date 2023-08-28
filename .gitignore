@@ -3,4 +3,5 @@ googlemaps_key.txt
 UPDATE/*
 *.DS_STORE
 *.pyc
+*.lock
 database.pk
