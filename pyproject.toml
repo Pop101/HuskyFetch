@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "huskyfetch"
+version = "0.1.0"
+description = "A website to fetch and display auditable UW classes (and possibly other campus events)"
+authors = ["Pop101 <leon@leibmann.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+flask = "^2.2.2"
+waitress = "^1.4.4"
+lxml = "^4.9.3"
+timeframe = "^1.0.0"
+requests = "^2.31.0"
+python-dateutil = "^2.8.2"
+cachetools = "^5.3.1"
+apscheduler = "^3.10.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

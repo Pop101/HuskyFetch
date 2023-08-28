@@ -44,7 +44,7 @@ def get_current_quarter():
 
 
 def get_current_quarter_year(digits=2):
-    return get_current_quarter() + str(datetime.now().year)[-digits:]
+    return str(get_current_quarter()) + str(datetime.now().year)[-digits:]
 
 
 @cache(maxsize=1, ttl=10 * 60)
