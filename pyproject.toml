@@ -1,4 +1,5 @@
 [tool.poetry]
+package-mode = false
 name = "huskyfetch"
 version = "0.1.0"
 description = "A website to fetch and display auditable UW classes (and possibly other campus events)"
